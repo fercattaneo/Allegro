@@ -4,6 +4,7 @@
 #include<allegro5/allegro_ttf.h>
 #include<allegro5/allegro_font.h>
 #include<allegro5/allegro_primitives.h>
+#include<allegro5/allegro_image.h>
 
 
 int main() {
@@ -49,9 +50,12 @@ int main() {
     
     al_rest(5.0);
     */
-    //INTERACCIÓN
+    //INTERACCIÓN 
+   
     al_init_primitives_addon();
     al_install_keyboard();
+    al_init_image_addon();
+    ALLEGRO_BITMAP* player = al_load_bitmap("foto.jpeg");
     ALLEGRO_EVENT_QUEUE*event_queue=al_create_event_queue();
     al_register_event_source(event_queue, al_get_keyboard_event_source());
     char done= 0;
@@ -81,13 +85,16 @@ int main() {
                     break;
             }
         }
-        al_draw_filled_rectangle(x, y, x+50, y+20, electricblue);
+        al_draw_bitmap(player, x+50, y+20, NULL);
         al_flip_display();
         al_clear_to_color(al_map_rgb(0,0,0));
         
     }
+    //IMAGENES
+    
     al_destroy_display(buffer);
-    al_destroy_event_queue(event_queue);
+    al_destroy_event_queue(event_queue);//
+    al_destroy_bitmap(player);
     
     
     return 0;

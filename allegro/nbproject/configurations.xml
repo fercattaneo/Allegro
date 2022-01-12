@@ -8,6 +8,7 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>foto.jpeg</itemPath>
       <itemPath>nombre.ttf</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
@@ -54,6 +55,8 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="foto.jpeg" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="nombre.ttf" ex="false" tool="3" flavor2="0">
@@ -79,6 +82,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="foto.jpeg" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="nombre.ttf" ex="false" tool="3" flavor2="0">
